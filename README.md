@@ -1,0 +1,1 @@
+# sm_autoshutdown_ext_checker
