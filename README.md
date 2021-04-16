@@ -13,9 +13,11 @@ This lambda function checks periodically if all the user profiles under each Sag
 
 [![Launch in us-west-2](assets/launch-stack.png?raw=true)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=auto-shutdown-ext-checker&templateURL=https://bucket-name.s3.us-west-2.amazonaws.com/ext_checker_cnf.template)
 
-3. Provide your S3 object url for your lambda function package uploaded by the *upload_lambda.sh* script
+3. Update the S3 URL of the CNF template file (uploaded by the *upload_lambda.sh* script):
 
-4. Test your lambda function
+4. Provide your S3 object url for your lambda function package uploaded by the *upload_lambda.sh* script
 
-5. *(Optional)* Subscribe to the SNS topic to get notification via email
+5. Test your lambda function
+
+6. *(Optional)* Subscribe to the SNS topic to get notification via email
 
