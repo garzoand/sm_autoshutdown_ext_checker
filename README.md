@@ -11,5 +11,5 @@ This lambda function checks periodically if all the user profiles under each Sag
 
 2. Push the **Launch** button below. Switch to the proper region. Update the S3 URL of the CNF template file (uploaded by the *upload_lambda.sh* script):
 
-[![Launch in us-west-2](assets/launch-stack.png?raw=true)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=auto-shutdown-ext-checker&templateURL=https://<bucket name>.s3.<region>.amazonaws.com/ext_checker_cnf.template)
+[![Launch in us-west-2](assets/launch-stack.png?raw=true)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=auto-shutdown-ext-checker&templateURL=https://bucker-name.s3.us-west-2.amazonaws.com/ext_checker_cnf.template)
 
