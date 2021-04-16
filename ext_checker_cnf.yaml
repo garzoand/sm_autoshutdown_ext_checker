@@ -1,0 +1,35 @@
+Resources:
+  
+  AutoShutdownExtCheckerRoleAlarms:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: studio-ext-checker-alarms
+      TopicName: studio-ext-checker-alarms      
+
+  AutoShutdownExtCheckerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AutoShutdownExtCheckerRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: 
+              Service:
+                - lambda.amazonaws.com
+            Action:
+                - sts:AssumeRole
+      Policies:
+        - PolicyName: ExtCheckerPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sagemaker:CreatePresignedDomainUrl
+                  - sagemaker:ListUserProfiles
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - sns:Publish
+                Resource: !Ref AutoShutdownExtCheckerRoleAlarms
