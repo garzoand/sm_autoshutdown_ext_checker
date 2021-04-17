@@ -39,5 +39,13 @@ When you call the Lambda function, you have to pass the **Region** and the **SNS
 
 ![Alt Step 5](assets/step55.jpg?raw=true "Step 3")
 
+8. Schedule to run the Extension Checker daily
+
+Go to the **CloudWatch** console, click on the **Events/Rules** on the left navigation plane. Click on **Create rule**. Set the Event Source to Schedule and provide the desired cadence to run the function *(e.g. daily)*. Click on the Add target button, select the Lambda function and provide the following JSON document as input:
+
+```json
+{ "region": "us-west-2", "sns-topic": "arn:aws:sns:us-west-2:<account id>:studio-ext-checker-alarms" }
+```
+
 
 
