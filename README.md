@@ -27,6 +27,9 @@ This lambda function checks periodically if all the user profiles under each Sag
 
 6. *(Optional)* Subscribe to the SNS topic to get notification via email
 
+Tha lambda function publish the list of SageMaker Studio User Profiles not having the auto-shutdown extension installed into an SNS topic. It is up to you how you would handle these notification. For example, you can subscribe into this SNS topic with your email address and you can get a notification in email every time when the lambda function runs and there are User Profiles without the extension installed.
+
+To subscribe to the SNS topic with your email address, please go to the **SNS Console / Topics** and find the provisioned SNS topic (**studio-ext-checker-alarms**). Click on the **Create subscription** button. For *Protocol*, please seled Email and you can specify your Email in the *Endpoint* text box. Once you have created the subscription, you will get an email from the SNS service to confirm your subscription. After the confirmation you will get an email once there is a new notification pushed into this topic.
 
 7. Test your lambda function
 
