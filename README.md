@@ -15,6 +15,8 @@ This lambda function checks periodically if all the user profiles under each Sag
 
 3. Update the S3 URL of the CNF template file (uploaded by the *upload_lambda.sh* script):
 
+![Alt Step 1](assets/step1.jpg?raw=true "Step 1")
+
 4. Provide your S3 object url for your lambda function package uploaded by the *upload_lambda.sh* script
 
 5. Test your lambda function
