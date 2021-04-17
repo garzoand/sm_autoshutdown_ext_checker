@@ -34,7 +34,7 @@ To test your lambda function, please go to the **Lambda** console and find the p
 
 When you call the Lambda function, you have to pass the **Region** and the **SNS topic name** where to the alarms will be published. These parameters needs to be passed as a JSON document, please see the image below. For SNS topic, you have to provide the fully qualifies ARN.
 
-![Alt Step 5](assets/step5.jpg?raw=true "Step 3")
+![Alt Step 5](assets/step55.jpg?raw=true "Step 3")
 
 
 
