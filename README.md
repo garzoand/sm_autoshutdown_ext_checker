@@ -17,9 +17,15 @@ This lambda function checks periodically if all the user profiles under each Sag
 
 ![Alt Step 1](assets/step1.jpg?raw=true "Step 1")
 
-4. Provide your S3 object url for your lambda function package uploaded by the *upload_lambda.sh* script
+4. Provide your S3 object url for your lambda function package uploaded by the *upload_lambda.sh* script. Click on the *Next* button.
 
-5. Test your lambda function
+![Alt Step 2](assets/step2.jpg?raw=true "Step 2")
 
-6. *(Optional)* Subscribe to the SNS topic to get notification via email
+5. As we are provisioning a role for the lambda function, you have to allow the IAM provisioning capability for the template as well. Hit on the *Launch Template* button.
+
+![Alt Step 3](assets/step3.jpg?raw=true "Step 3")
+
+6. Test your lambda function
+
+7. *(Optional)* Subscribe to the SNS topic to get notification via email
 
