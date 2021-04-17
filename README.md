@@ -25,7 +25,16 @@ This lambda function checks periodically if all the user profiles under each Sag
 
 ![Alt Step 3](assets/step3.jpg?raw=true "Step 3")
 
-6. Test your lambda function
+6. *(Optional)* Subscribe to the SNS topic to get notification via email
 
-7. *(Optional)* Subscribe to the SNS topic to get notification via email
+
+7. Test your lambda function
+
+To test your lambda function, please go to the **Lambda** console and find the provisionged **auto-shutdown-ext-checker** function. To add a new test even, click on the **Test** button and select the **Create test event** menu item.
+
+When you call the Lambda function, you have to pass the **Region** and the **SNS topic name** where to the alarms will be published. These parameters needs to be passed as a JSON document, please see the image below. For SNS topic, you have to provide the fully qualifies ARN.
+
+![Alt Step 5](assets/step5.jpg?raw=true "Step 3")
+
+
 
