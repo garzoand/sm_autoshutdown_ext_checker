@@ -21,7 +21,7 @@ This lambda function checks periodically if all the user profiles under each Sag
 
 ![Alt Step 2](assets/step2.jpg?raw=true "Step 2")
 
-5. As we are provisioning a role for the lambda function, you have to allow the IAM provisioning capability for the template as well. Hit on the *Launch Template* button.
+5. As we are provisioning a role for the lambda function, you have to allow the IAM provisioning capability for the template as well. Hit on the *Create stack* button.
 
 ![Alt Step 3](assets/step3.jpg?raw=true "Step 3")
 
