@@ -1,3 +1,8 @@
+Parameters:
+  LambdaFunctionPackage:
+    Type: String
+    Description: S3 object URL for the lambda 
+
 Resources:
   
   AutoShutdownExtCheckerRoleAlarms:
@@ -33,3 +38,13 @@ Resources:
                 Action:
                   - sns:Publish
                 Resource: !Ref AutoShutdownExtCheckerRoleAlarms
+
+  AutoShutdownExtCheckerLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: auto-shutdown-ext-checker
+      Code:
+        S3Key: !Ref LambdaFunctionPackage
+      Role: !Ref AutoShutdownExtCheckerRole
+      Runtime: python3.7
+      Timeout: 900
