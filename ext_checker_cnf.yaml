@@ -44,7 +44,9 @@ Resources:
     Properties:
       FunctionName: auto-shutdown-ext-checker
       Code:
-        S3Key: !Ref LambdaFunctionPackage
-      Role: !Ref AutoShutdownExtCheckerRole
+        S3Bucket: ext-checker-aggarzo
+        S3Key: ext_checker.zip
+      Role: !GetAtt AutoShutdownExtCheckerRole.Arn
       Runtime: python3.7
+      Handler: ext_checker.lambda_handler
       Timeout: 900
